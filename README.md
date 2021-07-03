@@ -27,6 +27,6 @@ network={
 
 * Run the following Script after the installation and configuration end
 
-`curl -sSL https://github.com/digitalhhz/appliance/blob/main/docker.sh | sh`
+`curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
 
 ## FAQ
