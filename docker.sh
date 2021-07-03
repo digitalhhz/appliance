@@ -16,4 +16,6 @@ echo "(6) Umgebung vorbereiten"
 sudo git clone https://github.com/digitalhhz/appliance.git
 echo "(7) Container hochfahren"
 cd appliance
+sudo docker volume create portainer_data
+sudo chown -R 1000:1000 ./nodered
 sudo docker-compose up -d
