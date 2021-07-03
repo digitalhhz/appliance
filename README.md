@@ -31,11 +31,13 @@ network={
 
 ## How to build a new application
 
-1. Clone this base appliance repository
+0. To have a connection to the Base Appliance - Fork this Repo
+
+1. Otherwise clone this base appliance repository
 
 `sudo git clone`
 
-2. Make your custom app
+2. Build your custom app (web app, node-red flows, ... )
 
 
 3. Add, Commit and push your changes
@@ -58,7 +60,9 @@ network={
 
 `sudo docker push digitalhhz/nodered-dhhz:latest`
 
+8. Example:
 
+https://github.com/Andrew71423/appliance
 
 
 ## FAQ
