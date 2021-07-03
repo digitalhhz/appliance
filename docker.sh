@@ -8,7 +8,7 @@ sudo apt-get install -y libffi-dev libssl-dev
 sudo apt install -y python3-dev
 sudo apt-get install -y python3 python3-pip
 echo "(4) Docker compose installieren und aktivieren"
-sudo pip3 install -y docker-compose
+sudo pip3 install docker-compose
 sudo systemctl enable docker
 echo "(5) Git installieren"
 sudo apt install -y git
