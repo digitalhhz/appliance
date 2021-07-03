@@ -4,20 +4,27 @@ services:
     image: portainer/portainer-ce
     ports:
       - "9000:9000"
+      - "8000:8000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-  
-  nodered:
-    image: nodered/node-red
-    ports:
-      - "1880:1880"
-    volumes:
-      - ~/appliance/nodered:/data
+    restart: always
 
   mosquitto:
     image: eclipse-mosquitto
     ports:
       - "1883:1883"
     volumes:
-      - ~/appliance/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    restart: always
+
+  nodered:
+    image: nodered/node-red
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered:/data
+    restart: always
+
+volumes:
+  portainer_data:
