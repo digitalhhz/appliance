@@ -5,6 +5,7 @@
 * Mosquitto MQTT
 * Node Red
 * Avahi
+* Portainer
 
 ## How to start
 
