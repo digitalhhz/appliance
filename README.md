@@ -2,10 +2,10 @@
 
 ## Provided services
 
-* Mosquitto MQTT
-* Node Red
-* Avahi
-* Portainer
+   * Mosquitto MQTT
+   * Node Red
+   * Avahi
+   * Portainer
 
 ## How to start
 
@@ -38,7 +38,10 @@ network={
 
 `sudo git clone`
 
-2. Build your custom app (web app, node-red flows, ... )
+2. Build your custom app (web app, node-red flows, ... ) 
+
+   * build it directly on the desired target architecture (e.g. arm64 v7)
+   * otherwise in Step 5 you will need to use `docker buildx` (https://docs.docker.com/buildx/working-with-buildx/) in order to define on which platform(s) the image will be used
 
 
 3. Add, Commit and push your changes
