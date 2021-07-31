@@ -3,6 +3,8 @@ echo "(1) System Updaten"
 sudo apt-get update -y && sudo apt-get upgrade -y
 echo "(2) Docker installieren"
 curl -sSL https://get.docker.com | sh
+sudo gpasswd -a $USER docker
+newgrp docker
 echo "(3) Python installieren"
 sudo apt-get install -y libffi-dev libssl-dev
 sudo apt install -y python3-dev
