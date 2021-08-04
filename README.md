@@ -30,6 +30,13 @@ network={
 
 `curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
 
+4. Optional reboot your appliance, navigate to the appliance directory and start the docker compose again
+
+`sudo reboot`
+`cd appliance`
+`sudo docker-compose up -d`
+
+
 ## How to build a new application
 
 0. To have a connection to the Base Appliance - Fork this Repo
