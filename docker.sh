@@ -1,11 +1,11 @@
 #! /bin/sh
-echo "(1) System Updaten"
-sudo apt-get update -y && sudo apt-get upgrade -y
-echo "(2) Docker installieren"
+echo "(1) Docker installieren"
 curl -fsSL https://get.docker.com | sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
+echo "(2) System Updaten"
+sudo apt-get update -y && sudo apt-get upgrade -y
 echo "(3) Python installieren"
 sudo apt-get install -y libffi-dev libssl-dev
 sudo apt install -y python3-dev
