@@ -30,7 +30,7 @@ network={
 
 `curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
 
-4. Optional reboot your appliance, navigate to the appliance directory and start the docker compose again
+4. Reboot your appliance, than navigate to the appliance directory and start the docker compose again
 
 `sudo reboot`
 `cd appliance`
