@@ -70,3 +70,8 @@ https://github.com/Andrew71423/appliance
 
 
 ## FAQ
+
+1. My Containers are not starting
+
+Please reboot your appliance with 
+`sudo reboot`
