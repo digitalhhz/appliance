@@ -25,16 +25,15 @@ network={
     key_mgmt=WPA-PSK
 }
 ```
+3. Update your System and Reboot your appliance first.
 
-3. Run the following Script after the installation and configuration end
+`sudo apt-get update -y && sudo apt-get upgrade -y`
+`sudo reboot`
+
+
+4. After the reboot run the following Script after the installation and configuration end
 
 `curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
-
-4. Reboot your appliance, than navigate to the appliance directory and start the docker compose again
-
-`sudo reboot`
-`cd appliance`
-`sudo docker-compose up -d`
 
 
 ## How to build a new application
