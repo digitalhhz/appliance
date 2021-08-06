@@ -25,6 +25,12 @@ network={
     key_mgmt=WPA-PSK
 }
 ```
+
+4.SSH into your Raspberry Pi and login with the default username and password:
+* Username:pi
+* Password: raspberry
+* Please don't forget to change your default password with `raspi-config`
+
 3. Update your System and Reboot your appliance first.
 
 `sudo apt-get update -y && sudo apt-get upgrade -y`
