@@ -2,10 +2,10 @@
 
 ## Provided services
 
-   * Mosquitto MQTT
-   * Node Red + Default Flow
-   * Avahi
-   * Portainer
+   * Mosquitto MQTT [Port 1833]
+   * Node Red + Default Flow [Port 1880]
+   * Avahi - integrated
+   * Portainer [Port 9000]
 
 ## Part 1: How to start
 
@@ -40,6 +40,8 @@ network={
 5. After the reboot run the following Script after the installation and configuration end
 
 `curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
+
+6. Test your appliance by visiting Portainer [your-ip-address:9000] or Node Red [your-ip-address:1880]
 
 
 ## Part 2: How to build a new application
