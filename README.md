@@ -44,9 +44,8 @@ network={
 
 ## Part 2: How to build a new application
 
-0. To have a connection to the Base Appliance - Fork this Repo
 
-1. Otherwise clone this base appliance repository
+1. To have a connection to the Base Appliance - Fork this Repo and clone your new repository to your target application hardware.
 
 `sudo git clone`
 
