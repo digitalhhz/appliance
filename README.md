@@ -7,7 +7,7 @@
    * Avahi - integrated
    * Portainer [Port 9000]
 
-## Part 1: How to start
+## Part 1: How to start a Base Appliance
 
 1. Install Raspberry Pi OS on your new appliance
 [Raspberry PI OS](https://www.raspberrypi.org/software/operating-systems/)
@@ -44,7 +44,7 @@ network={
 6. Test your appliance by visiting Portainer [your-ip-address:9000] or Node Red [your-ip-address:1880]
 
 
-## Part 2: How to build a new application
+## Part 2: How to build a new Custom Appliance
 
 
 1. To have a connection to the Base Appliance - Fork this Repo and clone your new repository to your target application hardware.
