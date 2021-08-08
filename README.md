@@ -7,7 +7,7 @@
    * Avahi
    * Portainer
 
-## How to start
+## Part 1: How to start
 
 1. Install Raspberry Pi OS on your new appliance
 [Raspberry PI OS](https://www.raspberrypi.org/software/operating-systems/)
@@ -26,23 +26,23 @@ network={
 }
 ```
 
-4.SSH into your Raspberry Pi and login with the default username and password:
+3.  SSH into your Raspberry Pi and login with the default username and password:
 * Username:pi
 * Password: raspberry
 * Please don't forget to change your default password with `raspi-config`
 
-3. Update your System and Reboot your appliance first.
+4. Update your System and Reboot your appliance first.
 
 `sudo apt-get update -y && sudo apt-get upgrade -y`
 `sudo reboot`
 
 
-4. After the reboot run the following Script after the installation and configuration end
+5. After the reboot run the following Script after the installation and configuration end
 
 `curl -sSL https://raw.githubusercontent.com/digitalhhz/appliance/main/docker.sh | sh`
 
 
-## How to build a new application
+## Part 2: How to build a new application
 
 0. To have a connection to the Base Appliance - Fork this Repo
 
