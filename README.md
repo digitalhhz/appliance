@@ -3,7 +3,7 @@
 ## Provided services
 
    * Mosquitto MQTT
-   * Node Red
+   * Node Red + Default Flow
    * Avahi
    * Portainer
 
