@@ -84,6 +84,8 @@ https://github.com/Andrew71423/appliance
 
 ## FAQ
 
+If you habe any questions or concerns please raise an Issue Ticket. Questions und answers which will come up frequently will be documented here inside this FAQ.
+
 1. My Containers are not starting
 
 Please reboot your appliance with 
