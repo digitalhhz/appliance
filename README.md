@@ -11,6 +11,7 @@
 
 1. Install Raspberry Pi OS on your new appliance
 [Raspberry PI OS](https://www.raspberrypi.org/software/operating-systems/)
+Raspberry Pi OS Lite should be enough for most of the Use Cases.
 
 2. Set up SSH and Internet Connection
 
