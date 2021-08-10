@@ -66,6 +66,14 @@ network={
 
 4. Adjust your Dockerfile as needed (example in this repo)
 
+Example A: New Node Red Flow and new Node Red Module (e.g. node-red-dashboard)
+
+`FROM nodered/node-red
+RUN npm install node-red-dashboard
+COPY settings.js /data/settings.js
+COPY flows_cred.json /data/flows_cred.json
+COPY flows.json /data/flows.json`
+
 5. Build your new image
 
 `docker build -t your-image-name:your-tag .`
