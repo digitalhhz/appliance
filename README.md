@@ -55,6 +55,8 @@ network={
 
 2. Adjust your Dockerfile as needed (example file in this repo)
 
+`sudo nano Dockerfile`
+
 Example A: New Node Red Flow and new Node Red Module (e.g. node-red-dashboard)
 
 ```FROM nodered/node-red
