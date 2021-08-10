@@ -48,46 +48,43 @@ network={
 ## Part 2: How to build a new Custom Appliance
 
 
-1. To have a connection to the Base Appliance - Fork this Repo and clone your new repository to your target application hardware.
-
-`sudo git clone`
-
-2. Build your custom app (web app, node-red flows, ... ) 
+1. Build your custom app (web app, node-red flows, ... ) 
 
    * build it directly on the desired target architecture (e.g. arm64 v7)
    * otherwise in Step 5 you will need to use `docker buildx` (https://docs.docker.com/buildx/working-with-buildx/) in order to define on which platform(s) the image will be used
 
-
-3. Add, Commit and push your changes
-
-`git add`
-`git commit`
-`git push`
-
-4. Adjust your Dockerfile as needed (example in this repo)
+2. Adjust your Dockerfile as needed (example file in this repo)
 
 Example A: New Node Red Flow and new Node Red Module (e.g. node-red-dashboard)
 
 ```FROM nodered/node-red
+# Start with Node Red Base Image
+FROM nodered/node-red
+# Install node-red-dashboard module with npm
 RUN npm install node-red-dashboard
-COPY settings.js /data/settings.js
-COPY flows_cred.json /data/flows_cred.json
-COPY flows.json /data/flows.json
+# Copy all the relevant files
+COPY nodered/settings.js /data/settings.js
+COPY nodered/flows.json /data/flows.json
+COPY nodered/flows_cred.json /data/flows_cred.json
 ```
 
-5. Build your new image
+3. Login to docker with
 
-`docker build -t your-image-name:your-tag .`
+`sudo docker login`
 
-6. Tag your image if needed, e.g.
+4. Build your new image from the /appliance directory or where your Dockerfile is located
+
+`sudo docker build -t your-image-name:your-tag .`
+
+5. Tag your image if needed, e.g.
 
 `sudo docker image tag nodered-dhhz digitalhhz/nodered-dhhz:latest`
 
-7. Push your new image to the Docker Registry
+6. Push your new image to the Docker Registry
 
 `sudo docker push digitalhhz/nodered-dhhz:latest`
 
-8. Example:
+8. Example Appliance can be viewed here:
 
 https://github.com/Andrew71423/appliance
 
@@ -100,3 +97,5 @@ If you habe any questions or concerns please raise an Issue Ticket. Questions un
 
 Please reboot your appliance with 
 `sudo reboot`
+
+2. Dockerfile best practices can be viewed at [Docker](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
