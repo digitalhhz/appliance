@@ -74,15 +74,21 @@ COPY nodered/flows_cred.json /data/flows_cred.json
 
 4. Build your new image from the /appliance directory or where your Dockerfile is located
 
-`sudo docker build -t your-image-name:your-tag .`
+`sudo docker build -t your-image-name:latest .`
 
 5. Tag your image if needed, e.g.
 
-`sudo docker image tag nodered-dhhz digitalhhz/nodered-dhhz:latest`
+`sudo docker image tag your-image-name digitalhhz/your-image-name:latest`
 
 6. Push your new image to the Docker Registry
 
-`sudo docker push digitalhhz/nodered-dhhz:latest`
+`sudo docker push digitalhhz/your-image-name:latest`
+
+7. Now you have build and published your new Custom Appliance. In order to test it please :
+
+* stop your running docker containers with `sudo docker-compose down`
+* create a new directory with e.g. `mkdir test`
+* pull and start your test image e.g. `sudo docker run -it -p 1880:1880 digitalhhz/nodered-dhhz`
 
 8. Example Appliance can be viewed here:
 
