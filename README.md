@@ -78,6 +78,8 @@ COPY nodered/flows_cred.json /data/flows_cred.json
 
 `sudo docker build -t your-image-name:latest .`
 
+Don't forget the '.' at the end of the docker build command :) 
+
 5. Tag your image if needed, e.g.
 
 `sudo docker image tag your-image-name digitalhhz/your-image-name:latest`
