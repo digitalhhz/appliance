@@ -96,7 +96,7 @@ Don't forget the '.' at the end of the docker build command :)
 
 8. Example Appliance can be viewed here:
 
-https://github.com/Andrew71423/appliance
+https://github.com/lizard91/appliance
 
 
 ## FAQ
