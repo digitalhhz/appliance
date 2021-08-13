@@ -91,9 +91,8 @@ Don't forget the '.' at the end of the docker build command :)
 
 7. Now you have build and published your new Custom Appliance. In order to test it please :
 
-* stop your running docker containers with `sudo docker-compose down`
-* create a new directory with e.g. `mkdir test`
-* pull and start your test image e.g. `sudo docker run -it -p 1880:1880 digitalhhz/nodered-dhhz`
+* stop your running docker containers from the Base Appliance directory with `sudo docker-compose down`
+* pull and start your test image e.g. `sudo docker run -it -p 1880:1880 digitalhhz/your-image-name:latest`
 
 8. Example Appliance can be viewed here:
 
