@@ -52,6 +52,7 @@ network={
 
    * build it directly on the desired target architecture (e.g. arm64 v7)
    * otherwise in Step 5 you will need to use `docker buildx` (https://docs.docker.com/buildx/working-with-buildx/) in order to define on which platform(s) the image will be used
+   * all the next steps will be done on a Raspberry Pi 4 (arm64 v7)
 
 2. Adjust your Dockerfile as needed (example file in this repo)
 
