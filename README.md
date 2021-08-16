@@ -70,31 +70,41 @@ COPY nodered/settings.js /data/settings.js
 COPY nodered/flows.json /data/flows.json
 COPY nodered/flows_cred.json /data/flows_cred.json
 ```
+3. Adjust your docker-compose.yml file and add your new image configuration details. In the example below I replaced the original Node Red Image with my customized image
 
-3. Login to docker with
-
-`sudo docker login`
-
+```
+  nodered:
+    image: digitalhhz/nodered-dhhz
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered:/data
+    restart: always
+```
 4. Build your new image from the /appliance directory or where your Dockerfile is located
 
 `sudo docker build -t your-image-name:latest .`
 
 Don't forget the '.' at the end of the docker build command :) 
 
-5. Tag your image if needed, e.g.
+5. [Optional] Login to docker if you like to publish the docker image to a Registry
+
+`sudo docker login`
+
+6. [Optional] Tag your image
 
 `sudo docker image tag your-image-name digitalhhz/your-image-name:latest`
 
-6. Push your new image to the Docker Registry
+7. [Optional]Push your new image to the Docker Registry
 
 `sudo docker push digitalhhz/your-image-name:latest`
 
-7. Now you have build and published your new Custom Appliance. In order to test it please :
+8. Now you have build and published your new Custom Appliance. In order to test it please :
 
 * stop your running docker containers from the Base Appliance directory with `sudo docker-compose down`
 * pull and start your test image e.g. `sudo docker run -it -p 1880:1880 digitalhhz/your-image-name:latest`
 
-8. Example Appliance can be viewed here:
+9. Example Appliance can be viewed here:
 
 https://github.com/lizard91/appliance
 
@@ -109,3 +119,5 @@ Please reboot your appliance with
 `sudo reboot`
 
 2. Dockerfile best practices can be viewed at [Docker](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
+3. Docker compose best practices can be viewed at [Github Docker](https://github.com/docker/awesome-compose)
