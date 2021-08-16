@@ -74,7 +74,7 @@ COPY nodered/flows_cred.json /data/flows_cred.json
 
 ```
   nodered:
-    image: digitalhhz/nodered-dhhz
+    image: digitalhhz/your-image-name:latest
     ports:
       - "1880:1880"
     volumes:
